@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D'Store</title>
+  <link rel="stylesheet" href="./e commerce_files/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">D'Store</div>
+    <ul class="nav-links">
+      <li><a href="http://127.0.0.1:5500/index.html#">Home</a></li>
+      <li><a href="http://127.0.0.1:5500/index.html#">Products</a></li>
+      <li><a href="http://127.0.0.1:5500/index.html#">About</a></li>
+      <li><a href="http://127.0.0.1:5500/index.html#">Contact</a></li>
+      <li id="cart-button" class="cart">🛒 Cart<span id="cart-count">3</span></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Welcome to D'Store</h1>
+    <p>Your one-stop shop for cool items!</p>
+  </header>
+
+  <!-- Products Section -->
+  <section class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="./e commerce_files/Backrest.webp" alt="Backrest">
+        <h3>Pink single hoodie</h3>
+        <p>$120</p>
+        <button class="add-to-cart" data-id="p1" data-name="Pink single hoddie" data-price="120">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./e commerce_files/Dark.jpg" alt="Dark">
+        <h3>Oversized grey hoddie</h3>
+        <p>$190</p>
+        <button class="add-to-cart" data-id="product 2" data-name="Oversized grey hoddie" data-price="190">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./e commerce_files/skyblue.webp" alt="skyblue">
+        <h3>light skyblue hoddie</h3>
+        <p>$149</p>
+        <button class="add-to-cart" data-id="product 3" data-name="light skyblue hoddie" data-price="149">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./e commerce_files/gray hod.jpg" alt="gray hoddie">
+        <h3>Thick Ash hoddie </h3>
+        <p>$240</p>
+        <button class="add-to-cart" data-id="product 4" data-name="Thick Ash hoddie" data-price="240">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./e commerce_files/joggers 1.jpg" alt="joggers 1">
+        <h3>light grey joggers</h3>
+        <p>$60</p>
+        <button class="add-to-cart" data-id="product 5" data-name="light grey joggers" data-price="60">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./e commerce_files/Men joggers.webp" alt="Men joggers">
+        <h3>Black baggy joggers</h3>
+        <p>$65</p>
+        <button class="add-to-cart" data-id="product 6" data-name="Black baggy joggers" data-price="65">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./e commerce_files/hanes.avif" alt="hanes">
+        <h3>Sweat pants joggers</h3>
+        <p>$80</p>
+        <button class="add-to-cart" data-id="product 7" data-name="Sweat pants joggers" data-price="80">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./e commerce_files/cherry pants.webp" alt="cherry pants">
+        <h3>Cherry soft joggers</h3>
+        <p>$120</p>
+        <button class="add-to-cart" data-id="product 8" data-name="Cherry soft joggers" data-price="120">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./e commerce_files/stack it.webp" alt="stack it">
+        <h3>White sneakers for men</h3>
+        <p>$210</p>
+        <button class="add-to-cart" data-id="product 9" data-name="White sneakers for men" data-price="210">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./e commerce_files/whop.jpg" alt="whop">
+        <h3>Nike sneakers</h3>
+        <p>$240</p>
+        <button class="add-to-cart" data-id="product 10" data-name="Nike sneakers" data-price="240">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./e commerce_files/stripe.webp" alt="stripe">
+        <h3>plain white sneakers</h3>
+        <p>$254</p>
+        <button class="add-to-cart" data-id="product 11" data-name="plain white sneakers" data-price="254">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="./e commerce_files/dope.webp" alt="dope">
+        <h3>Nike running shoes for men</h3>
+        <p>$400</p>
+        <button class="add-to-cart" data-id="product 12" data-name="Nike running shoes for men" data-price="400">Add to cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!---cart popup-->
+  <div class="cart-popup">
+    <h2>Your cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="total-price" total:$0<="" p="">
+      <button id="close-cart">Close</button>
+  </p></div>
+
+  <!--Cart Modal-->
+  <div id="cart-overlay" class="cart-overlay" aria-hidden="true">
+    <div class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+     
+      <header class="cart-header">
+     <h3 id="cart-title">Your cart</h3>
+      <button id="cart-close" class="cart-close" aria-label="close cart">X</button>
+      </header>
+
+      <div id="cart-items">
+      <ul id="cart-items-list"><li>light skyblue hoddie -$149.00</li><li>Pink single hoddie -$120.00</li><li>Nike sneakers -$240.00</li></ul>
+      </div>
+       
+      
+
+      <div class="cart-footer">
+        <div class="cart-total">
+          Total: $<span id="cart-total">509.00</span>
+        </div>
+
+        <div class="cart-actions">
+          <button id="cart-clear" class="btn outline">Clear cart</button>
+          <button id="cart-checkout" class="btn primary">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 D'Store. All rights reserved.</p>
+  </footer>
+  <script src="./e commerce_files/script.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D'Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">D'Store</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li id="cart-button" class="cart">🛒 Cart<span id="cart-count">0</span></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Welcome to D'Store</h1>
+    <p>Your one-stop shop for cool items!</p>
+  </header>
+
+  <!-- Products Section -->
+  <section class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="Backrest.webp" alt="Backrest">
+        <h3>Pink single hoodie</h3>
+        <p>$120</p>
+        <button class="add-to-cart" 
+        data-id="p1"
+        data-name="Pink single hoddie" 
+        data-price="120">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="Dark.jpg" alt="Dark">
+        <h3>Oversized grey hoddie</h3>
+        <p>$190</p>
+        <button class="add-to-cart" 
+                data-id="product 2"
+        data-name="Oversized grey hoddie" 
+        data-price="190">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="skyblue.webp" alt="skyblue">
+        <h3>light skyblue hoddie</h3>
+        <p>$149</p>
+        <button class="add-to-cart" 
+                data-id="product 3"
+        data-name="light skyblue hoddie" 
+        data-price="149">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="gray hod.jpg" alt="gray hoddie">
+        <h3>Thick Ash hoddie </h3>
+        <p>$240</p>
+        <button class="add-to-cart" 
+                data-id="product 4"
+        data-name="Thick Ash hoddie" 
+        data-price="240">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="joggers 1.jpg" alt="joggers 1">
+        <h3>light grey joggers</h3>
+        <p>$60</p>
+        <button class="add-to-cart"
+                data-id="product 5" 
+        data-name="light grey joggers" 
+        data-price="60">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="Men joggers.webp" alt="Men joggers">
+        <h3>Black baggy joggers</h3>
+        <p>$65</p>
+        <button class="add-to-cart"
+                data-id="product 6" 
+        data-name="Black baggy joggers" 
+        data-price="65">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="hanes.avif" alt="hanes">
+        <h3>Sweat pants joggers</h3>
+        <p>$80</p>
+        <button class="add-to-cart" 
+                data-id="product 7"
+        data-name="Sweat pants joggers" 
+        data-price="80">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="cherry pants.webp" alt="cherry pants">
+        <h3>Cherry soft joggers</h3>
+        <p>$120</p>
+        <button class="add-to-cart" 
+                data-id="product 8"
+        data-name="Cherry soft joggers" 
+        data-price="120">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="stack it.webp" alt="stack it">
+        <h3>White sneakers for men</h3>
+        <p>$210</p>
+        <button class="add-to-cart" 
+                data-id="product 9"
+        data-name="White sneakers for men" 
+        data-price="210">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="whop.jpg" alt="whop">
+        <h3>Nike sneakers</h3>
+        <p>$240</p>
+        <button class="add-to-cart"
+               data-id="product 10" 
+        data-name="Nike sneakers" 
+        data-price="240">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="stripe.webp" alt="stripe">
+        <h3>plain white sneakers</h3>
+        <p>$254</p>
+        <button class="add-to-cart" 
+                data-id="product 11"
+        data-name="plain white sneakers" 
+        data-price="254">Add to cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="dope.webp" alt="dope">
+        <h3>Nike running shoes for men</h3>
+        <p>$400</p>
+        <button class="add-to-cart"
+               data-id="product 12" 
+        data-name="Nike running shoes for men" 
+        data-price="400">Add to cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!---cart popup-->
+  <div class="cart-popup" class="cart-popup">
+    <h2>Your cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="total-price"Total:$0</p>
+      <button id="close-cart">Close</button>
+  </div>
+
+  <!--Cart Modal-->
+  <div id="cart-overlay" class="cart-overlay" aria-hidden="true">
+    <div class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+     
+      <header class="cart-header">
+     <h3 id="cart-title">Your cart</h3>
+      <button id="cart-close" class="cart-close" aria-label="close cart">X</button>
+      </header>
+
+      <div id="cart-items">
+      <ul id="cart-items-list">
+        <!--Js will insert <li> product Name - $price</li>-->
+      </ul>
+      </div>
+       
+      
+
+      <div class="cart-footer">
+        <div class="cart-total">
+          Total: $<span id="cart-total">0.00</span>
+        </div>
+
+        <div class="cart-actions">
+          <button id="cart-clear" class="btn outline">Clear cart</button>
+          <button id="cart-checkout" class="btn primary">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 D'Store. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>
