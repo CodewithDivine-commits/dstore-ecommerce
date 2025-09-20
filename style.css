@@ -178,3 +178,7 @@ footer {
   color: #fff;
   margin-top: 2rem;
 }
+body
+{
+overflow-x:hidden;
+}
