@@ -19,6 +19,7 @@ let cart=[]; //to hold products (objects with name and price)
 let total=0; //total price tracker
 
 
+
 //Add products when buttons clicked //
 //loop through buttons and add event listener to each
 cartButtons.forEach(button=>{
@@ -89,6 +90,14 @@ function renderCart(){
     cartCount.textContent=0; // reset cart count display
   });
 
+  const menuToggle=document.querySelector('.menu-toggle');
+  const navLinks=document.querySelector('nav ul');
+
+  menuToggle.addEventListener("click",()=>{
+    navLinks.classList.toggle("active");
+  });
+
+  
 
 
   //checkout button (for demo, just alert total)

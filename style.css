@@ -10,6 +10,8 @@ body {
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* Navigation bar */
@@ -182,3 +184,33 @@ body
 {
 overflow-x:hidden;
 }
+
+.menu-toggle{
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+}
+
+@media (max-width: 768px){
+  nav ul{
+    display: none;
+    flex-direction: column;
+  }
+  nav ul.active{
+    display: flex;
+  }
+  .menu-toggle{
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
