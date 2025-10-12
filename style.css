@@ -193,18 +193,7 @@ overflow-x:hidden;
   color: white;
 }
 
-@media (max-width: 768px){
-  nav ul{
-    display: none;
-    flex-direction: column;
-  }
-  nav ul.active{
-    display: flex;
-  }
-  .menu-toggle{
-    display: block;
-  }
-}
+
 
 
 
